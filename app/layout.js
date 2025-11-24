@@ -4,7 +4,7 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "ThreatGen - AI Threat Modeling",
+  title: "Threaten - AI Threat Modeling",
   description: "Generate comprehensive threat models using Gemini AI",
 };
 
