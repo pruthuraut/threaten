@@ -64,6 +64,9 @@ export default function InputSection({ onSubmit, isLoading }) {
                             <option value="PASTA">PASTA - Process for Attack Simulation</option>
                             <option value="LINDDUN">LINDDUN - Privacy Threat Modeling</option>
                             <option value="CVSS">CVSS - Vulnerability Scoring System</option>
+                            <option value="DREAD">DREAD - Damage, Reproducibility, Exploitability...</option>
+                            <option value="STRIDELM">STRIDE-LM - Lateral Movement</option>
+                            <option value="MASTERO">MASTERO - Advanced Threat Framework</option>
                         </select>
                     </div>
                 </div>

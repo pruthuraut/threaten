@@ -137,5 +137,3 @@ This project is licensed under the **MIT License** – see the `LICENSE` file fo
 - **The open‑source community** – for countless libraries and inspiration.
 
 ---
-
-*Built with ❤️, neon lights, and a dash of cyber‑punk flair.*

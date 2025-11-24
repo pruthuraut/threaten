@@ -20,8 +20,14 @@ export async function POST(request) {
             );
         }
 
+        console.log("Received request. Model:", model);
+
         const promptText = `You are an expert Security Architect and Threat Modeler.
 Create a comprehensive threat model for the following system using the ${model} methodology.
+STRICTLY use the ${model} methodology for the analysis. Do NOT use STRIDE unless the requested model is STRIDE.
+If the requested model is DREAD, use Damage, Reproducibility, Exploitability, Affected Users, Discoverability.
+If the requested model is STRIDELM, focus on Lateral Movement.
+If the requested model is MASTERO, use the MASTERO framework.
 
 System Description:
 ${description}
@@ -31,7 +37,7 @@ ${image ? "Note: An architecture diagram has been provided." : ""}
 Return your response as a JSON object with this exact structure:
 {
   "dfd": "A Mermaid.js flowchart using basic 'flowchart TD' syntax with TRUST BOUNDARIES and DATA FLOW. Show trust boundaries using subgraph zones. Label arrows with data types. Keep it clean with maximum 15 nodes.",
-  "analysis": "A detailed markdown report with:\\n## Scope\\n\\n## Identified Risks\\n\\n## Proposed Mitigations\\n\\n## Validation Steps"
+  "analysis": "A detailed markdown report with:\\n## Scope\\n\\n## Trust Boundaries Analysis\\n\\n## Identified Risks\\n\\n## Proposed Mitigations\\n\\n## Validation Steps"
 }
 
 CRITICAL: For the DFD, follow these STRICT rules:
